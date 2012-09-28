@@ -1,4 +1,4 @@
-<h1>Como usarlo..</h1>
+<h1>Como usarlo</h1>
 <h2>En el iframe</h2>
 <ul>
 	<li>Incluir iframe.js (NO requiere Jquery)
@@ -36,7 +36,7 @@
 	&lt;script&gt;
 		iframeMessenger.post("add=loading");
 	&lt;/script&gt;</pre>
-		
+
 	</li>
 	<li>
 		<p>Resizear con animacion (ancho, alto, animacion,velocidad)</p>
@@ -87,7 +87,7 @@
 &lt;script type="text/javascript" src="parent.js" &gt;&lt;/script&gt;</pre>
 	</li>
 	<li>Instanciar los componentes:
-	
+
 	<pre style="word-wrap: break-word; white-space: pre-wrap;">
 &lt;script&gt;
 	iframeMessageCallback.init();
