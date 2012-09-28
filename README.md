@@ -82,7 +82,7 @@
 
 <h4>En el JS:</h4>
 <ul>
-	<li>Incluir parent.js (requiere Jquery)
+	<li>Incluir parent.js (requiere Jquery + ChicoUI)
 		<pre style="word-wrap: break-word; white-space: pre-wrap;">
 &lt;script type="text/javascript" src="parent.js" &gt;&lt;/script&gt;</pre>
 	</li>
