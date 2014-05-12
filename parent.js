@@ -248,29 +248,34 @@ var iframeModal = (function() {
 	*/
 	function open(event){
 
-		// Recupero los datos del link
-		var that = $(this),
-    		dinamic = that.attr("data-modal:dinamic") == "true",
-    		width = that.attr("data-modal:width"),
-    		height = that.attr("data-modal:height"),
-    		url = that.attr("data-modal:url");
-
-    	if (!dinamic || (window.postMessage && dinamic)){
-
-	    	// Seteo tamaños, contenido y muestro el modal
-			_modal.width(width).height(height).content(buildIframe(url,dinamic)).show();
-
-			// Inicializo iframeModalMessage solo si es necesario
-			if( iframeMessageCallback != null ){
-
-				iframeMessageCallback.setModal(_modal);
-			}
-
-			event.preventDefault();
-
-		}
-
-	}
+	    // Recupero los datos del link
+	    var that = $(this),
+	        dinamic = that.attr("data-modal:dinamic") == "true",
+	        width = that.attr("data-modal:width"),
+	        height = that.attr("data-modal:height"),
+	        url = that.attr("data-modal:url");
+	
+	
+	    if (!dinamic || (window.postMessage && dinamic)){
+	
+	        // Seteo tamaños, contenido y muestro el modal
+	        
+	        _modal.content(buildIframe(url,dinamic,width,height));
+	        _modal.show();
+	        _modal.width(width + "px");
+	        _modal.height(height + "px");
+	
+	        // Inicializo iframeModalMessage solo si es necesario
+	        if( iframeMessageCallback != null ){
+	
+	            iframeMessageCallback.setModal(_modal);
+	        }
+	
+	        event.preventDefault();
+	
+	    }
+	
+	}   
 
 	/*
 	 * @public
